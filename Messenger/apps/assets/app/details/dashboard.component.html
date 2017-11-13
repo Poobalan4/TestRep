@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-md-4 panel panel-success" style="padding-left:0px;padding-right:0px;margin-left:20px;">
+        <div class="panel-heading">
+            <b>Application Criticality</b>
+        </div>
+        <div class="panel-body">
+            <nvd3 [options]="options" [data]="data"></nvd3>
+        </div>
+    </div>
+    <div class="col-md-3 panel panel-success" style="padding-left:0px;padding-right:0px;margin-left:20px;">
+        <div class="panel-heading">
+            <b>Application Types</b>
+        </div>
+        <div class="panel-body">
+            <table class="table table-sm">
+                <tr *ngFor='let app of appWise'>
+                    <td> {{app._id}} </td>
+                    <td> {{app.count}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-4 panel panel-success" style="padding-left:0px;padding-right:0px;margin-left:20px;">
+        <div class="panel-heading">
+            <b>Portfolio</b>
+        </div>
+        <!-- style="max-height:400px;overflow-y: scroll;" -->
+        <div class="panel-body">
+            <table class="table table-sm">
+                <tr *ngFor='let app of businessWise'>
+                    <td> {{app._id}} </td>
+                    <td> {{app.count}} </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

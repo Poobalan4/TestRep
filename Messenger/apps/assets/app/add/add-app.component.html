@@ -1,0 +1,68 @@
+<div class="col-md-12">
+    <form (ngSubmit)="onSubmit()"  [formGroup]="myForm">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <!-- <input type="text" id="name" class="form-control" name="name" [ngModel]="application?.name" formControlName="name" required> -->
+                    <input type="text" id="name" class="form-control" name="name" formControlName="name" required [ngModel]="application?.name">
+                </div>
+                <div class="form-group">
+                    <label for="apptype">Application Type</label>
+                    <select class="form-control" formControlName="apptype" [ngModel]="application?.apptype">
+                        <option>Web Application</option>
+                        <option>Tool</option>
+                        <option>RA Apps</option>
+                        <option>Infrastructure Component</option>
+                        <option>Portal</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tech">Technology</label>
+                    <input type="text" id="tech" class="form-control" name="tech" formControlName="tech" [ngModel]="application?.tech">
+                </div>
+                <div class="form-group">
+                    <label for="desc">Description</label>
+                    <textarea class="form-control" rows="2" id="desc" name="desc" formControlName="desc" [ngModel]="application?.desc"></textarea>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="name">Business Process</label>
+                    <input type="text" id="business" class="form-control" name="business" formControlName="business" [ngModel]="application?.business">
+                </div>
+                <div class="form-group">
+                    <label for="name">Sub Business Process</label>
+                    <input type="text" id="subbusiness" class="form-control" name="subbusiness" formControlName="subbusiness" [ngModel]="application?.subbusiness">
+                </div>
+                <div class="form-group">
+                    <label for="os">Operating System</label>
+                    <input type="text" id="os" class="form-control" name="os" formControlName="os" [ngModel]="application?.os">
+                </div>
+                <div class="form-group">
+                    <label for="desc">Criticality</label>
+                    <input type="text" class="form-control" id="criticality" name="criticality" formControlName="criticality" [ngModel]="application?.criticality">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="dm" class="text-info">Delivery Manager</label>
+                    <input type="text" id="dm" class="form-control" name="dm" formControlName="dm" [ngModel]="application?.dm">
+                </div>
+                <div class="form-group">
+                    <label for="pm" class="text-info">Project Manager</label>
+                    <input type="text" id="pm" class="form-control" name="pm" formControlName="pm" [ngModel]="application?.pm">
+                </div>
+                <div class="form-group">
+                    <label for="cc" class="text-info">CC</label>
+                    <input type="text" id="cc" class="form-control" name="cc" formControlName="cc" [ngModel]="application?.cc">
+                </div>  
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary" [disabled]="!myForm.valid">Save</button>
+        <button type="button" class="btn btn-danger" (click)="onReset(f)">Reset</button>
+    </form>
+    <hr/>
+    <pre>{{myForm.value | json }}</pre>
+</div>

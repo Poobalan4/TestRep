@@ -1,0 +1,40 @@
+<div class="row-fluid">
+    <!-- <div class="col-md-4"> -->
+
+    <div class="col-md-3" style="border-right: 1px dotted lightgray">
+        <input type="text" class="form-control" placeholder="Search by AppName or DM" [(ngModel)]="filter" style="margin-bottom:15px;border-color:darkseagreen;">
+
+        <article class="panel panel-default" *ngFor="let app of apps | searchFilter:filter" (click)=openDetails(app)>
+            <!-- <div class="panel-heading" [ngStyle]="{'background-color': color }" (mouseover)="color=''"> -->
+            <div class="panel-heading" [ngClass]="{'activeApp': selectedApp.name == app.name }">
+                <b> {{app.name}} </b>
+            </div>
+             <div class="panel-body" *ngIf="listview" style="border-left-width:.25rem;border-left-color:red;">
+                {{app.dm}}
+            </div>    
+        </article>
+
+        <!-- <div [ngSwitch]="app.criticality">
+                    <div id="circle" *ngSwitchCase="'High'"  style="float:right;background:red;"></div>
+                    <div id="circle" *ngSwitchCase="'Medium'"  style="float:right;background:green;"></div>
+                    <div id="circle" *ngSwitchCase="'Low'" style="float:right;background:blue;"></div>
+                </div>   -->
+        <!-- <div class="list-group" *ngFor="let app of apps" (click)=openDetails(app)>
+        <a class="list-group-item">{{app.name}} <span style="float:right;"> Del</span></a>
+    </div> -->
+        <!-- <ul class="list-group">
+        <li class="list-group-item list-group-item-action" *ngFor="let app of apps" (click)=openDetails(app)>{{app.name}}</li>
+    </ul> -->
+    </div>
+    <div class="col-md-9">
+        <!-- <app-detail [app]="selectedApp"></app-detail> -->
+        <add-app *ngIf="mode=='edit'" 
+            [ediApp]="selectedApp" 
+            (updateComplete)="mode='view'"></add-app>
+        <app-detail [app]="selectedApp" 
+            *ngIf="mode=='view'" 
+            (editClicked)="editApp()"
+            (deleteClicked)="deleteApp()"
+            (viewClicked)="listview = !listview"></app-detail>
+    </div>
+</div>

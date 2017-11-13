@@ -1,0 +1,173 @@
+<div class="panel panel-info" *ngIf="app">
+    <div class="panel-heading">
+        <b> {{app.name}} </b>
+        <span style="float:right;font-weight:bold;">
+           <a (click)='onChangeView()'>ChangeView | </a>
+           <a (click)='onEdit()'>Edit | </a>
+           <a (click)='onDelete()'>Delete</a>
+       </span>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-lg-12">
+                <p class="text-primary"><strong>Description</strong></p>
+                <p><em>{{app.desc}}</em></p>
+            </div>
+        </div>
+        <!-- <hr style="margin-top:0;"/> -->
+        <div class="row">
+            <div class="col-lg-4">
+                <p class="text-primary"><strong>Application Type</strong></p>
+                <p>{{app.apptype}}</p>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-primary"><strong>Business Process</strong></p>
+                <p>{{app.business}}</p>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-primary"><strong>Sub Business Process</strong></p>
+                <p>{{app.subbusiness}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <p class="text-primary"><strong>Technology</strong></p>
+                <p>{{app.tech}}</p>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-primary"><strong>Operating System</strong></p>
+                <p>{{app.os}}</p>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-primary"><strong>Master App</strong></p>
+                <p>{{app.masterapp}}</p>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-lg-4">
+                <p class="text-success"><strong>Filer Code</strong></p>
+                <p>{{app.filer}}</p>
+            </div>
+            <div class="col-lg-4">
+                <p class="text-danger"><strong>Scripter Code</strong></p>
+                <p>{{app.scripter}}</p>
+            </div>
+        </div> -->
+    </div>
+
+    <table class="table table-sm table-bordered">
+        <thead>
+            <tr>
+                <th>Env</th>
+                <th>Server</th>
+                <th>Database</th>
+                <th>Schema</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Dev</th>
+                <td>{{app.dserver}}</td>
+                <td>{{app.ddb}}</td>
+                <td>{{app.dschema}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Test</th>
+                <td>{{app.tserver}}</td>
+                <td>{{app.tdb}}</td>
+                <td>{{app.tschema}}</td>
+            </tr>
+            <tr>
+                <th scope="row">Live</th>
+                <td>{{app.lserver}}</td>
+                <td>{{app.ldb}}</td>
+                <td>{{app.lschema}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<!-- Ownership -->
+
+<div *ngIf="app">
+    <!-- style="border-left-width: .25rem;border-left-color: green;" -->
+    <div class="list-group-item" style="border-color: lightblue;">
+        <div class="row">
+            <div class="col-md-6">
+                <p class="text-primary"><strong>Ownership</strong></p>
+            </div>
+            <div class="col-md-6">
+                <p class="text-primary"><strong>Portfolio</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                Delivery Manager
+            </div>
+            <div class="col-md-3">
+                {{app.dm}}
+            </div>
+            <div class="col-md-3">
+                Portfolio
+            </div>
+            <div class="col-md-3">
+                {{app.portfolio}}
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-md-3">
+                Project Manager
+            </div>
+            <div class="col-md-3">
+                {{app.pm}}
+            </div>
+            <div class="col-md-3">
+                Project Code
+            </div>
+            <div class="col-md-3">
+                <mark>{{app.projcode}}</mark>
+            </div>
+        </div>
+        <div class="row space">
+            <div class="col-md-3">
+                CC
+            </div>
+            <div class="col-md-3">
+                <p>{{app.cc}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="list-group-item" style="border-color: lightblue;">
+        <div class="row">
+            <div class="col-md-3">
+                <p class="text-primary"><strong>Criticality</strong></p>
+            </div>
+            <div class="col-md-3">
+                <p class="text-primary"><strong>Confidentiality</strong></p>
+            </div>
+            <div class="col-md-3">
+                <p class="text-primary"><strong>Integrity</strong></p>
+            </div>
+            <div class="col-md-3">
+                <p class="text-primary"><strong>Availability</strong></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                {{app.criticality}}
+            </div>
+            <div class="col-md-3">
+                {{app.confid}}
+            </div>
+            <div class="col-md-3">
+                {{app.integ}}
+            </div>
+            <div class="col-md-3">
+                {{app.appli}}
+            </div>
+        </div>
+    </div>
+
+</div>
