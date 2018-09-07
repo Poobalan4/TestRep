@@ -26,6 +26,42 @@
       "effort": 2,
       "timein": "09:00",
       "timeout": "11:00"
-    }
+    },
+    {
+      "activityid": 123,
+      "activitycode": "ABC",
+      "description": "Activities",
+      "paycode": "Regular",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
+    },
+    {
+      "activityid": 123,
+      "activitycode": "TEST",
+      "description": "Functional Testing",
+      "paycode": "Leave",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
+    },
+    {
+      "activityid": 123,
+      "activitycode": "FUN",
+      "description": "Org Activities",
+      "paycode": "Leave",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
+    },
+    {
+      "activityid": 123,
+      "activitycode": "GORG",
+      "description": "Organisation",
+      "paycode": "Callback",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
+    },
   ]
 }
