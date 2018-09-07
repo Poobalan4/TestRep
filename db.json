@@ -26,15 +26,6 @@
       "effort": 2,
       "timein": "09:00",
       "timeout": "11:00"
-    },
-    {
-      "activityid": 123,
-      "activitycode": "SUPPORT",
-      "description": "Support activity",
-      "paycode": "Support",
-      "effort": 2,
-      "timein": "09:00",
-      "timeout": "11:00"
     }
   ]
 }
