@@ -1,28 +1,40 @@
 {
   "TaskEffort": [
     {
-      "TaskId": 123,
-      "TaskName": "PCD",
-      "PayCode": "Regular",
-      "Effort": 2,
-      "TimeIN": "09:00",
-      "TimeOUT": "11:00"
+      "activityid": 123,
+      "activitycode": "PCD",
+      "description": "Coding and test",
+      "paycode": "Regular",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
     },
     {
-      "TaskId": 123,
-      "TaskName": "PTRE",
-      "PayCode": "Callback",
-      "Effort": 2,
-      "TimeIN": "09:00",
-      "TimeOUT": "11:00"
+      "activityid": 123,
+      "activitycode": "PTRE",
+      "description": "Training",
+      "paycode": "Regular",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
     },
     {
-      "TaskId": 2,
-      "TaskName": "GHOL",
-      "PayCode": "Leave",
-      "Effort": 2,
-      "TimeIN": "09:00",
-      "TimeOUT": "11:00"
+      "activityid": 123,
+      "activitycode": "GHOL",
+      "description": "leave task",
+      "paycode": "Leave",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
+    },
+    {
+      "activityid": 123,
+      "activitycode": "SUPPORT",
+      "description": "Support activity",
+      "paycode": "Support",
+      "effort": 2,
+      "timein": "09:00",
+      "timeout": "11:00"
     }
   ]
 }
